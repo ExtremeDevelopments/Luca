@@ -44,7 +44,7 @@ module.exports = {
     CPU ------- ${cpu.model()}
     `;
 
-  const memoryUsage = Object.entries(process.memoryUsage()).map(([key, value]) => `${`${key[0].toUpperCase()}${key.slice(1)}`.padEnd(19, '-')} ${value / 1024 / 1024}MB`).join('\n');
+  const memoryUsage = Object.entries(process.memoryUsage()).map(([key, value]) => `${`${key[0].toUpperCase()}${key.slice(1)} `.padEnd(19, '-')} ${value / 1024 / 1024}MB`).join('\n');
 
     embed
     .setAuthor(message.author.tag, message.author.displayAvatarURL({
